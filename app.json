@@ -57,6 +57,11 @@
         "value": "",
         "required": true
       }
+        "CMD_HNDLR": {
+        "description": "Custom command handler.",
+        "value": ".",
+        "required": false
+      },
     },
     "buildpacks": [
           {

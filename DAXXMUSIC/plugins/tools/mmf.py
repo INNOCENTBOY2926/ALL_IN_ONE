@@ -3,7 +3,7 @@ import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
 
-from DAXXMUSIC import telethn as bot
+from DAXXMUSIC import telethon as bot
 from DAXXMUSIC.events import register
 
 

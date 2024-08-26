@@ -140,7 +140,7 @@ def AdminActual(mystic):
                     [
                         InlineKeyboardButton(
                             text="ʜᴏᴡ ᴛᴏ ғɪx ?",
-                            callback_data="SAIFHELPGC",
+                            callback_data="THE_FUCKER_BOTS_2926",
                         ),
                     ]
                 ]
